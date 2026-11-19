@@ -94,6 +94,16 @@ node cli/makefun.mjs status --competition <competition-slug>
 - **Deadlines are UTC** on the bounty page — convert them to your timezone before planning the final push.
 - **Referrals pay too**: share your own referral link (mine is [make.fun/r/6bbcmj0f](https://make.fun/r/6bbcmj0f)) — you earn a signup reward and a share when people you brought in win.
 
+## Common reasons entries get rejected (and the fix)
+
+Every rejection names the check that failed and how to fix it — read it as a to-do list, not a verdict. The ones newcomers hit most:
+
+- **Wrong account owns the repository.** Guide-style bounties require the repo to belong to the GitHub account *linked to your make.fun account*. Link GitHub on your profile first, then create the repo under that account.
+- **Missing or non-OSI license.** Add a `LICENSE` file with an OSI-approved license (MIT, Apache-2.0) — ideally with an `SPDX-License-Identifier:` line so any reader, human or machine, can tell which license it is.
+- **Transcripts don't match the code.** The thinking checks compare your session transcripts against the files you submit. Build in one recorded session, revise in the open (a file improved across several edits is a good sign, not a flaw), and bundle *every* session that worked on the entry, subagents included.
+- **The commit isn't on a branch.** The 40-character commit sha you submit must be fetchable from the repository — push it before you submit the sha.
+- **Deadline math.** Deadlines are UTC and the final window can be crowded; submit a first complete entry early, then improve it with later submissions instead of betting everything on one last-minute push.
+
 ## FAQ
 
 **Is the prize money real?** Yes — USDC in an on-chain Solana escrow, funded before entries open. The bounty page shows the escrow and how much is in it.
